@@ -7,7 +7,8 @@
 }
 
 body {
-  background-image: url('https://img.freepik.com/fotos-gratis/parede-de-estudio-gradiente-de-ouro-amarelo-abstrato-de-luxo-bem-como-uso-como-plano-de-fundo-layout-banner-e-apresentacao-do-produto_1258-63544.jpg?w=2000');
+  /background-image: url('https://img.freepik.com/fotos-gratis/parede-de-estudio-gradiente-de-ouro-amarelo-abstrato-de-luxo-bem-como-uso-como-plano-de-fundo-layout-banner-e-apresentacao-do-produto_1258-63544.jpg?w=2000');*/max-width:;
+  background-color: orange;
   background-size: auto 100vh; 
   font-family: Arial;
   height: 100vh;
@@ -104,12 +105,14 @@ a:hover {
 
   }
 }
-
+.sobre,
 .sub-sub-title,
 .site-subtitle,
 .site-title {
   color: darkgreen;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-title {
@@ -122,7 +125,7 @@ a:hover {
  font-family: 'Dancing Script', cursive;
  /* font-family: 'Press Start 2P', cursive; */
  line-height: 1.5em;
- font-size: 2em;
+ font-size: 3em;
 }
 
 .sub-sub-title {
@@ -134,25 +137,52 @@ a:hover {
  margin-top: 100px;
 }
 
+.sobre,
 .contato,
 .portfolio {
-  background-color: orange;
   padding: 2em;
-  margin-bottom: 4em;
+  margin-bottom: 5em;
   text-align: center;
   min-height: 100vh;
 }
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
   color: darkgreen;
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 2em;
+  padding-top: 2em;
   font-size: 2em;
+}
+
+.sobre p {
+  font-style: normal;
+  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Press Start 2P', cursive; */
+  line-height: 1.5em;
+  font-size: 1.2em;
+  text-indent: 1.5em;
+  margin-bottom: 1.2em;
 }
 .portfolio figcaption {
   color: darkgreen;
 }
-
+.img-sobre {
+  height: 180px;
+  width: 240px;
+  margin-top: -40px;
+  margin-bottom: 2em;
+  border-radius: 65%;
+}
 .img-portfolio {
   height: 180px;
   width: 240px;
@@ -185,19 +215,21 @@ a:hover {
 
 .contato h3 {
   color: darkgreen;
-  margin-top: 100px;
+  margin-top: 2em;
   font-size: 1.7em;
 }
 
 .contato h4 {
   color: darkgreen;
-  margin: 10px;
+  margin: 2em;
   font-size: 1.3em;
 }
 
 .portfolio .grid { /* grid do portfolio */
   display: grid;
   gap: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .img-portfolio figure {
