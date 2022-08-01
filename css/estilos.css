@@ -7,11 +7,12 @@
 }
 
 body {
-  /background-image: url('https://img.freepik.com/fotos-gratis/parede-de-estudio-gradiente-de-ouro-amarelo-abstrato-de-luxo-bem-como-uso-como-plano-de-fundo-layout-banner-e-apresentacao-do-produto_1258-63544.jpg?w=2000');*/max-width:;
+  /*background-image: url('https://img.freepik.com/fotos-gratis/parede-de-estudio-gradiente-de-ouro-amarelo-abstrato-de-luxo-bem-como-uso-como-plano-de-fundo-layout-banner-e-apresentacao-do-produto_1258-63544.jpg?w=2000');*/
   background-color: orange;
   background-size: auto 100vh; 
   font-family: Arial;
   height: 100vh;
+  font-size: 10px;
 }
 /*se a tela tiver pelo menos 400px vai carregar estes estilos */
 @media (min-width: 400px) {
@@ -192,21 +193,50 @@ a:hover {
 
 .img-portfolio {
   height: 180px;
-  width: 220px;
-  /*object-fit: cover;
-  object-position: left bottom;*/
+  width: auto;
+  object-fit: cover;
+  object-position: left bottom;
   border-radius: 0%;
   transition: transform 500 ms ;
 }
 
-.img-portfolio:hover {
+/* .img-portfolio:hover {
   transform: scale(1.2) rotate3d(0, 0, 1, 10deg);
+} */
+
+.flip-card {
+  perspective: 800px;
+}
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.flip-card:hover .card{
+  transform: rotateY(180deg)
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top:  0;
+}
+
+.card-back {
+  background-color: orange;
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
 }
 
 .contato .icon {
   text-align: center;
 
 }
+
 .contato a {
   color: darkgreen;
   font-size: 4em;
@@ -236,11 +266,7 @@ a:hover {
   gap: 2em;
   margin-left: auto;
   margin-right: auto;
-}
-
-.img-portfolio figure {
-  text-align: center;
-
+  width: 240px;
 }
 
 @media (min-width: 560px) {
@@ -252,14 +278,14 @@ a:hover {
 
 @media (min-width: 880px) {
   .portfolio .grid {
-    grid-template-columns: repeat(3,240px);
+    grid-template-columns: repeat(3, 240px);
     justify-content: center;
-   /* height: calc(100vh - 2em - 48px - 2em);*/
+   /* height: calc(100vh - 2em - 48px - 2em); */
   }
 }
 
 @media (min-width: 1200px) {
-  .img-portfolio {
+ .img-portfolio {
   height: 180px;
   width: auto;
 }
